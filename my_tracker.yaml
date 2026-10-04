@@ -1,0 +1,10 @@
+# my_tracker.yaml  (ปรับจาก bytetrack.yaml ของ ultralytics 8.4.163)
+# วางไว้โฟลเดอร์เดียวกับสคริปต์ แล้วตั้ง TRACKER = "my_tracker.yaml"
+
+tracker_type: bytetrack
+track_high_thresh: 0.4   # (ปรับจาก 0.25) ความมั่นใจขั้นต่ำสำหรับจับคู่ขั้นแรก
+track_low_thresh: 0.1    # ใช้จับคู่ขั้นสอง กู้ track ตอนโมเดลมั่นใจต่ำชั่วขณะ
+new_track_thresh: 0.4    # (ปรับจาก 0.25) สร้าง track ใหม่เมื่อมั่นใจ >= ค่านี้ ลด track ปลอม
+track_buffer: 120        # (ปรับจาก 30) เก็บ track ที่หายไว้ ~4 วินาทีที่ 30 fps ก่อนทิ้ง
+match_thresh: 0.8
+fuse_score: True
